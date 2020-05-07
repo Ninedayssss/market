@@ -1,0 +1,13 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: m-gateway
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/mall?useSSL=true&serverTimezone=UTC
+    username: root
+    password: 123
+    driver-class-name: com.mysql.jdbc.Driver
+dubbo:
+  registry:
+    address: zookeeper://127.0.0.1:2181

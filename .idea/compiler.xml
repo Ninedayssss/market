@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="m-auth-common" />
+        <module name="m-auth-service" />
+        <module name="m-cart-common" />
+        <module name="m-cart-service" />
+        <module name="m-common" />
+        <module name="m-gateway" />
+        <module name="m-goods-common" />
+        <module name="m-goods-service" />
+        <module name="m-portal" />
+        <module name="m-search-common" />
+        <module name="m-search-service" />
+        <module name="m-user-common" />
+        <module name="m-user-service" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>
