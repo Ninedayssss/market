@@ -72,6 +72,7 @@ public class AuthController {
             //更新cookie中的token
             CookieUtils.newBuilder(response).httpOnly().request(request).build(jwtProperties.getCookieName(),newToken);
 
+            System.out.println("1234123123");
             //返回解析成功的用户信息
             return ResponseEntity.ok(userInfo);
         } catch (Exception e) {
