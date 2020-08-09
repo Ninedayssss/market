@@ -40,6 +40,7 @@ public class UserServiceImpl implements UserService {
         User record = new User();
         record.setUsername(username);
         User user = userMapper.selectOne(record);
+        System.out.println("hello");
         System.out.println("hello world");
 
         //检验用户是否存在
