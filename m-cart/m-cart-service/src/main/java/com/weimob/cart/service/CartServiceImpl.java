@@ -33,9 +33,7 @@ public class CartServiceImpl implements CartService {
     @Override
     public void addCart(Cart cart,UserInfo user) {
 
-        System.out.println("user"+user);
         String key = KEY_PREFIX + user.getId();
-        System.out.println("id"+user.getId());
 
         //hashkey
         String hashkey = cart.getSpuId().toString();

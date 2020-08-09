@@ -299,7 +299,7 @@
                     // 获取以前的购物车
                     const carts = ly.store.get("carts") || [];
                 // 获取与当前商品id一致的购物车数据
-                const cart = carts.find(c => c.id === id);
+                const cart = carts.find(c => c.spuId === id);
                 if (cart) {
                     // 存在，修改数量
                     cart.num += this.num;

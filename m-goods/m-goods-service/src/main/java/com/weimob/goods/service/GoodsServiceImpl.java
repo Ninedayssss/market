@@ -40,6 +40,7 @@ public class GoodsServiceImpl implements GoodsService {
      * 添加Spu
      * @param spu
      */
+    @Override
     public void saveGoods(Spu spu) {
         //新增spu
         spu.setSaleable(true);
@@ -57,6 +58,7 @@ public class GoodsServiceImpl implements GoodsService {
      * 商品下架
      * @param id
      */
+    @Override
     public void goodsSoldOut(Long id) {
         //根据id查找出spu
         Spu oldSpu = spuMapper.selectByPrimaryKey(id);
@@ -70,6 +72,7 @@ public class GoodsServiceImpl implements GoodsService {
      * 商品上架
      * @param id
      */
+    @Override
     public void goodsSoldUp(Long id) {
         Spu oldSpu = spuMapper.selectByPrimaryKey(id);
         oldSpu.setSaleable(true);
@@ -80,6 +83,7 @@ public class GoodsServiceImpl implements GoodsService {
      * 逻辑删除商品
      * @param id
      */
+    @Override
     public void deleteGoods(Long id) {
         Spu spu = spuMapper.selectByPrimaryKey(id);
         spu.setValid(false);
@@ -91,6 +95,7 @@ public class GoodsServiceImpl implements GoodsService {
      * 修改商品
      * @param spu
      */
+    @Override
     public void updateGoods(Spu spu) {
         if (spu.getId() == null){
             throw new MarketException(ExceptionEnum.GOODS_ID_CANNOT_BE_NULL);
@@ -113,6 +118,7 @@ public class GoodsServiceImpl implements GoodsService {
      * @param valid
      * @return
      */
+    @Override
     public PageResult<Spu> querySpuByPage(Integer page, Integer rows, Boolean salebale, String key, Boolean valid) {
         //分页
         PageHelper.startPage(page,rows);
@@ -172,6 +178,7 @@ public class GoodsServiceImpl implements GoodsService {
      * @param id
      * @return
      */
+    @Override
     public Spu querySpuById(Long id) {
         //查询spu
         Spu spu = spuMapper.selectByPrimaryKey(id);
